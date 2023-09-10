@@ -10,9 +10,12 @@ import { Loading } from './src/components/Loading';
 import { SignIn } from './src/screens/SignIn';
 import { Routes } from './src/routes';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { RealmProvider } from './src/libs/realm';
 
 export default function App() {
   const [fontsLoaded] = useFonts({ Roboto_400Regular, Roboto_700Bold })
+
+
 
   if (!fontsLoaded) {
     return (
@@ -27,9 +30,11 @@ export default function App() {
     <AppProvider id={REALM_APP_ID}>
       <ThemeProvider theme={theme} >
 
-        <SafeAreaProvider>
+        <SafeAreaProvider style={{ backgroundColor: theme.COLORS.GRAY_800 }}>
           <UserProvider fallback={SignIn} >
-            <Routes />
+            <RealmProvider>
+              <Routes />
+            </RealmProvider>
           </UserProvider>
           <StatusBar barStyle="light-content" backgroundColor="transparent" translucent />
         </SafeAreaProvider>
