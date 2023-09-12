@@ -37,7 +37,7 @@
 ### Mobile
 
 <p align="center">
-  <img alt="Animated Mobile Demonstration" title="#Mobile" src="github/demo_ignite_bg.gif" width="100%">
+  <img alt="Animated Mobile Demonstration" title="#Mobile" src="github/demo_ignite_bg.gif" width="40%">
 </p>
 
 ## :information_source: How To Use
