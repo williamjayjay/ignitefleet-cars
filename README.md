@@ -55,7 +55,15 @@ yarn
 
 3- Run web application
 ```bash
-yarn dev
+yarn start
+```
+
+```bash
+yarn android 
+```
+
+```bash
+yarn ios 
 ```
 
 ## :rocket: Used libraries
