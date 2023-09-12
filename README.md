@@ -58,10 +58,12 @@ yarn
 yarn start
 ```
 
+OR 
 ```bash
 yarn android 
 ```
 
+OR 
 ```bash
 yarn ios 
 ```
