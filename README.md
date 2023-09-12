@@ -19,7 +19,7 @@
 </p>
 
 <p>
-  <img src="./github/cover.png" alt="cover ignite-fleet" />
+  <img src=".github/cover.png" alt="cover ignite-fleet" />
 </p>
 
 <h4 align="center">
@@ -37,7 +37,7 @@
 ### Mobile
 
 <p align="center">
-  <img alt="Animated Mobile Demonstration" title="#Mobile" src="./github/demo_ignite_bg.gif" width="100%">
+  <img alt="Animated Mobile Demonstration" title="#Mobile" src=".github/demo_ignite_bg.gif" width="100%">
 </p>
 
 ## :information_source: How To Use
