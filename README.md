@@ -1,6 +1,6 @@
-<h1 align="center">
-    <h2>Ignite Fleet</h2>
-</h1>
+<h2 align="center">
+    Ignite Fleet
+</h2>
 
 <p align="center">
   <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/williamjayjay/ignitefleet-cars">
@@ -13,15 +13,13 @@
     <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/williamjayjay/ignitefleet-cars">
   </a>
     
-   <img alt="License" src="https://img.shields.io/github/license/williamjayjay/ignitefleet-cars">
-
    <a href="https://github.com/williamjayjay/ignitefleet-cars/stargazers">
     <img alt="Stargazers" src="https://img.shields.io/github/stars/williamjayjay/ignitefleet-cars?style=social">
   </a>
 </p>
 
 <p>
-  <img src=".github/cover.png" alt="cover ignite-fleet" />
+  <img src="./github/cover.png" alt="cover ignite-fleet" />
 </p>
 
 <h4 align="center">
@@ -39,7 +37,7 @@
 ### Mobile
 
 <p align="center">
-  <img alt="Animated Mobile Demonstration" title="#Mobile" src=".github/demo_ignite_bg.gif" width="100%">
+  <img alt="Animated Mobile Demonstration" title="#Mobile" src="./github/demo_ignite_bg.gif" width="100%">
 </p>
 
 ## :information_source: How To Use
