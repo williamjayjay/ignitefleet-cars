@@ -11,13 +11,15 @@ import { Loading } from './src/components/Loading';
 import { SignIn } from './src/screens/SignIn';
 import { Routes } from './src/routes';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
-import { RealmProvider } from './src/libs/realm';
+import { RealmProvider, syncConfig } from './src/libs/realm';
 import './src/libs/dayjs';
+import { WifiSlash } from 'phosphor-react-native';
+import { TopMessage } from './src/components/TopMessage';
+import { useNetInfo } from '@react-native-community/netinfo';
 
 export default function App() {
   const [fontsLoaded] = useFonts({ Roboto_400Regular, Roboto_700Bold })
-
-
+  const netInfo = useNetInfo();
 
   if (!fontsLoaded) {
     return (
@@ -33,12 +35,20 @@ export default function App() {
       <ThemeProvider theme={theme} >
 
         <SafeAreaProvider style={{ backgroundColor: theme.COLORS.GRAY_800 }}>
+          {
+            !netInfo.isConnected &&
+            <TopMessage
+              title='Você está off-line'
+              icon={WifiSlash}
+            />
+          }
+          <StatusBar barStyle="light-content" backgroundColor="transparent" translucent />
+
           <UserProvider fallback={SignIn} >
-            <RealmProvider>
+            <RealmProvider sync={syncConfig} fallback={Loading}>
               <Routes />
             </RealmProvider>
           </UserProvider>
-          <StatusBar barStyle="light-content" backgroundColor="transparent" translucent />
         </SafeAreaProvider>
 
       </ThemeProvider>

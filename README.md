@@ -76,7 +76,7 @@ yarn ios
 - [React-Navigation/native](https://reactnavigation.org/docs/getting-started/)
 - [React-Navigation/native-stack](https://reactnavigation.org/docs/hello-react-navigation)
 - [AsyncStorage](https://docs.expo.dev/versions/latest/sdk/async-storage)
-<!-- - [NetInfo](https://docs.expo.dev/versions/latest/sdk/netinfo) -->
+- [NetInfo](https://docs.expo.dev/versions/latest/sdk/netinfo)
 - [Realm](https://realm.io/)
 - [Dayjs](https://day.js.org/)
 - [Expo-auth-session](https://docs.expo.dev/versions/latest/sdk/auth-session/)
@@ -87,7 +87,7 @@ yarn ios
 - [React-native-get-random-values](https://github.com/LinusU/react-native-get-random-values)
 - [React-native-keyboard-aware-scroll-view](https://github.com/APSL/react-native-keyboard-aware-scroll-view)
 - [React-native-svg](https://github.com/software-mansion/react-native-svg)
-<!-- - [React-native-toast-message](https://github.com/calintamas/react-native-toast-message) -->
+- [React-native-toast-message](https://github.com/calintamas/react-native-toast-message)
 - [Styled-Components](https://www.styled-components.com/)
 <!-- - [Expo-location](https://docs.expo.dev/versions/latest/sdk/location) -->
 <!-- - [React-native-maps](https://docs.expo.dev/versions/latest/sdk/map-view/) -->
