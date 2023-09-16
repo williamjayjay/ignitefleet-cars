@@ -11,11 +11,12 @@ import { useNavigation } from '@react-navigation/native';
 import { useRealm } from '../../libs/realm';
 import { Historic } from '../../libs/realm/schemas/Historic';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
-import { LocationAccuracy, LocationSubscription, useForegroundPermissions, watchPositionAsync } from 'expo-location';
+import { LocationAccuracy, LocationObjectCoords, LocationSubscription, useForegroundPermissions, watchPositionAsync } from 'expo-location';
 import { getAddressLocation } from '../../utils/getAddressLocation';
 import { Loading } from '../../components/Loading';
 import { LocationInfo } from '../../components/LocationInfo';
 import { CarSimple } from 'phosphor-react-native';
+import { Map } from '../../components/Map';
 
 export function Departure() {
 
@@ -24,6 +25,7 @@ export function Departure() {
     const [isRegistering, setIsResgistering] = useState(false);
     const [isLoadingLocation, setIsLoadingLocation] = useState(true);
     const [currentAddress, setCurrentAddress] = useState<string | null>(null)
+    const [currentCoords, setCurrentCoords] = useState<LocationObjectCoords | null>(null)
 
     const [locationForegroundPermission, requestLocationForegroundPermission] = useForegroundPermissions();
 
@@ -85,6 +87,9 @@ export function Departure() {
             accuracy: LocationAccuracy.High,
             timeInterval: 1000
         }, (location) => {
+
+            setCurrentCoords(location.coords)
+
             getAddressLocation(location.coords)
                 .then(address => {
                     if (address) {
@@ -122,7 +127,15 @@ export function Departure() {
     return (
         <Container>
             <Header title='Saída' />
+            {currentCoords && <Map
+
+                coordinates={[
+                    { latitude: -5.0792, longitude: -42.7895 },
+                    { latitude: -5.0815, longitude: -42.7792 }
+                ]}
+            />}
             <KeyboardAwareScrollView extraHeight={100}>
+
                 <ScrollView>
                     <Content>
                         {
